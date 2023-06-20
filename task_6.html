@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(updateLight('green'));
+        function updateLight(current) {
+            let map = {
+                'green' : 'yellow',
+                'yellow': 'red',
+                'red': 'green'
+            };
+            
+            return current.replace(current, (current) => map[current]);
+
+        }
+
+        const original = [1, 2, 2, 4];
+        const withThree = original.with(3, 10);
+
+        console.log(original);
+        // [ 1, 2, 2, 4 ]
+
+        console.log(withThree);
+        // [ 1, 2, 3, 4 ]
+    </script>
+</body>
+</html>

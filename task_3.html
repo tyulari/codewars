@@ -1,0 +1,25 @@
+<!-- Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let result = findShort("bitcoin take over the world maybe who knows perhaps");
+    
+    console.log(result);
+
+    function findShort(s){
+      return s.split(' ').map(el => el.length).sort(function (a, b) {return a - b} )[0];
+    }
+    </script>
+    
+</body>
+</html>
